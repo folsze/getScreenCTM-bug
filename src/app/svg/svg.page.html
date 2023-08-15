@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+
+<!--  NOTE: my app uses ng-inline-svg, but this even happens with normal svgs in template-->
+<!--  <div-->
+<!--    class="container"-->
+<!--    inlineSVG="assets/example.svg"-->
+<!--    [onSVGLoaded]="onSvgLoaded"-->
+<!--  ></div>-->
+
+  <div class="container">
+    <svg
+      version="1.1"
+      id="svg13"
+      viewBox="0 0 200 200"
+      xmlns:svg="http://www.w3.org/2000/svg">
+      <g
+        stroke="#ff0000"
+        id="main-wrapper">
+        <rect
+          x="26.778288"
+          y="27.984278"
+          width="141.49081"
+          height="139.91692"
+          fill="#0000ff"
+          id="rect4"
+          style="stroke-width:14.1411" />
+      </g>
+    </svg>
+  </div>
+  <ion-button style="position: fixed; top: 40px; left: 0" (click)="calcAndLog()">log</ion-button>
+  <ion-button style="position: fixed; top: 200px; left: 0" (click)="goBack()">Go back</ion-button>
+</ion-content>

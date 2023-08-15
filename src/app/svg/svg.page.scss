@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100%; // NOTE: because of other things in my app, I think I need this to be 100%. It has no effect on this bug
+  height: 100%;
+  border: 1px blue solid;
+}
