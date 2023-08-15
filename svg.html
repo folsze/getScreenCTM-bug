@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG getScreenCTM Checker</title>
+</head>
+
+<body>
+<svg version="1.1" id="svg13" viewBox="0 0 200 200" xmlns:svg="http://www.w3.org/2000/svg">
+  <g stroke="#ff0000" id="main-wrapper">
+    <rect x="26.778288" y="27.984278" width="141.49081" height="139.91692" fill="#0000ff" id="rect4"
+          style="stroke-width:14.1411"></rect>
+  </g>
+</svg>
+
+<script>
+  // Function to check and log the .f value of the matrix
+  const checkCTM = () => {
+    const svgElement = document.getElementById('main-wrapper');
+    if (svgElement) {
+      const ctm = svgElement.getScreenCTM();
+      console.log(ctm.f);  // Logs the .f value of the matrix
+    } else {
+      console.error('SVG element with ID "main-wrapper" not found!');
+    }
+  };
+
+  // Check right away
+  checkCTM();
+
+  // Check after the specified intervals
+  setTimeout(checkCTM, 0);  // 0ms
+  setTimeout(checkCTM, 1);  // 1ms
+  setTimeout(checkCTM, 10); // 10ms
+  setTimeout(checkCTM, 100); // 100ms
+
+</script>
+</body>
+
+</html>
