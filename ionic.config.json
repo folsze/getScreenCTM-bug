@@ -1,0 +1,7 @@
+{
+  "name": "getScreenCTM-bug",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
